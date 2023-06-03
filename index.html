@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/selectCountry.css">
+    <link rel="stylesheet" href="styles/bg.css">
+    <link rel="stylesheet" href="styles/resultados.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <title>Mundial de Fútbol</title>
+</head>
+<body>
+    <div class="music hidden">
+        <button class="btn-music" id="play"><img src="img/play.svg" alt=""></button>
+        <button class="btn-music hidden" id="pause"><img src="img/pause.svg" alt=""></button>
+    </div>
+    <section class="choose-team animate__bounceIn">
+        <h2 class="choose-team-title">Selecciona 16 paises para iniciar</h2>
+        <h4 class="error"></h4>
+        <ul class="background">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+         </ul>
+        <div class="gallery-team"></div>
+        <button class="btn-getTeams" id="btn-getTeams">Iniciar!</button>
+    </section>
+    <main class="simulador hidden animate__bounceIn">
+        <ul class="background">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+         </ul>
+        <h1 class="title">Simulador de mundial de futbol</h1>
+    <section class="diagrama">
+        <div class="col-oct">
+            <h3 class="fase fase-oct">Octavos de final</h3>
+            <div class="game">
+                <div class="team">
+                    <h3 class="pais pais-oct"></h3>
+                    <h4 class="goles gol-oct">0</h4>
+                </div>
+                <div class="team">
+                    <h3 class="pais pais-oct"></h3>
+                    <h4 class="goles gol-oct">0</h4>
+                </div>
+            </div>
+            <div class="game">
+                <div class="team">
+                    <h3 class="pais pais-oct"></h3>
+                    <h4 class="goles gol-oct">0</h4>
+                </div>
+                <div class="team">
+                    <h3 class="pais pais-oct"></h3>
+                    <h4 class="goles gol-oct">0</h4>
+                </div>
+            </div>
+            <div class="game">
+                <div class="team">
+                    <h3 class="pais pais-oct"></h3>
+                    <h4 class="goles gol-oct">0</h4>
+                </div>
+                <div class="team">
+                    <h3 class="pais pais-oct"></h3>
+                    <h4 class="goles gol-oct">0</h4>
+                </div>
+            </div>
+            <div class="game">
+                <div class="team">
+                    <h3 class="pais pais-oct"></h3>
+                    <h4 class="goles gol-oct">0</h4>
+                </div>
+                <div class="team">
+                    <h3 class="pais pais-oct"></h3>
+                    <h4 class="goles gol-oct">0</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-cuarto">
+            <h3 class="fase fase-cuarto">Cuartos de Final</h3>
+            <div class="game">
+                <div class="team">
+                    <h3 class="pais pais-cuarto"></h3>
+                    <h4 class="goles gol-cuarto">0</h4>
+                </div>
+                <div class="team">
+                    <h3 class="pais pais-cuarto"></h3>
+                    <h4 class="goles gol-cuarto">0</h4>
+                </div>
+            </div>
+            <div class="game">
+                <div class="team">
+                    <h3 class="pais pais-cuarto"></h3>
+                    <h4 class="goles gol-cuarto">0</h4>
+                </div>
+                <div class="team">
+                    <h3 class="pais pais-cuarto"></h3>
+                    <h4 class="goles gol-cuarto">0</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-semis">
+            <h3 class="fase fase-semis">Semifinal</h3>
+            <div class="game">
+                <div class="team">
+                    <h3 class="pais pais-semis"></h3>
+                    <h4 class="goles gol-semis">0</h4>
+                </div>
+                <div class="team">
+                    <h3 class="pais pais-semis"></h3>
+                    <h4 class="goles gol-semis">0</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-final">
+            <h3 class="fase fase-final final-2">Final</h3>
+            <div class="game final-3">
+                <div class="team">
+                    <h3 class="pais pais-final"></h3>
+                    <h4 class="goles gol-final">0</h4>
+                </div>
+                <div class="team">
+                    <h3 class="pais pais-final"></h3>
+                    <h4 class="goles gol-final">0</h4>
+                </div>
+            </div>
+            <h3 class="fase fase-tercero final-0">Tercer Lugar</h3>
+            <div class="game final-1">
+                <div class="team">
+                    <h3 class="pais pais-tercer-lugar"></h3>
+                    <h4 class="goles gol-tercer-lugar">0</h4>
+                </div>
+                <div class="team">
+                    <h3 class="pais pais-tercer-lugar"></h3>
+                    <h4 class="goles gol-tercer-lugar">0</h4>
+                </div>
+            </div>
+            <div class="ganador final-4">
+                <h2 class="ganador-text">El ganador es:</h2>
+                <h3 class="ganador-team"></h3>
+                <button class="btn-simu" id="btn-reiniciar">Reiniciar</button>
+            </div>
+        </div>
+        <div class="col-semis">
+            <h3 class="fase fase-semis fase-semis-2">Semifinal</h3>
+            <div class="game">
+                <div class="team">
+                    <h3 class="pais pais-semis"></h3>
+                    <h4 class="goles gol-semis">0</h4>
+                </div>
+                <div class="team">
+                    <h3 class="pais pais-semis"></h3>
+                    <h4 class="goles gol-semis">0</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-cuarto">
+            <h3 class="fase fase-cuarto fase-cuarto-2">Cuartos de Final</h3>
+            <div class="game">
+                <div class="team">
+                    <h3 class="pais pais-cuarto"></h3>
+                    <h4 class="goles gol-cuarto">0</h4>
+                </div>
+                <div class="team">
+                    <h3 class="pais pais-cuarto"></h3>
+                    <h4 class="goles gol-cuarto">0</h4>
+                </div>
+            </div>
+            <div class="game">
+                <div class="team">
+                    <h3 class="pais pais-cuarto"></h3>
+                    <h4 class="goles gol-cuarto">0</h4>
+                </div>
+                <div class="team">
+                    <h3 class="pais pais-cuarto"></h3>
+                    <h4 class="goles gol-cuarto">0</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-oct">
+            <h3 class="fase fase-oct">Octavos de final</h3>
+            <div class="game">
+                <div class="team">
+                    <h3 class="pais pais-oct"></h3>
+                    <h4 class="goles gol-oct">0</h4>
+                </div>
+                <div class="team">
+                    <h3 class="pais pais-oct"></h3>
+                    <h4 class="goles gol-oct">0</h4>
+                </div>
+            </div>
+            <div class="game">
+                <div class="team">
+                    <h3 class="pais pais-oct"></h3>
+                    <h4 class="goles gol-oct">0</h4>
+                </div>
+                <div class="team">
+                    <h3 class="pais pais-oct"></h3>
+                    <h4 class="goles gol-oct">0</h4>
+                </div>
+            </div>
+            <div class="game">
+                <div class="team">
+                    <h3 class="pais pais-oct"></h3>
+                    <h4 class="goles gol-oct">0</h4>
+                </div>
+                <div class="team">
+                    <h3 class="pais pais-oct"></h3>
+                    <h4 class="goles gol-oct">0</h4>
+                </div>
+            </div>
+            <div class="game">
+                <div class="team">
+                    <h3 class="pais pais-oct"></h3>
+                    <h4 class="goles gol-oct">0</h4>
+                </div>
+                <div class="team">
+                    <h3 class="pais pais-oct"></h3>
+                    <h4 class="goles gol-oct">0</h4>
+                </div>
+            </div>
+        </div>
+    </section>  
+    </main>
+    <section class="resultados hidden animate__bounceIn">
+        <ul class="background">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+         </ul>
+        <div class="ganador">
+            <h1>El ganador es:</h1>
+            <img src="img/cup.png" alt="Copa del mundo" class="cup-img">
+            <h1 class="pais-ganador"></h1>
+        </div>
+        <div class="otros-resultados">
+            <h3 class="segundo-lugar">Segundo Lugar: </h3>
+            <h3 class="tercer-lugar">Tercer Lugar: </h3>
+            <h4 class="cuarto-lugar">Cuarto Lugar: </h4>
+        </div>
+        <div class="resultados-btns">
+            <button class="btn" id="btn-volver">Ver resultados</button>
+            <button  class="btn" id="btn-reiniciar">Reiniciar</button>
+        </div>
+    </section>
+    <script type="module" src="scripts/insertarPaises.js"></script>
+    <script type="module" src="scripts/resultado.js"></script>
+    <script type="module" src="scripts/music.js"></script>
+</body>
+</html>

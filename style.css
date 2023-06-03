@@ -1,0 +1,351 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.simulador {
+    width: 100vw;
+    height: 100vh; /* fallback for old browsers */
+    /* overflow: hidden; */
+}
+
+.btn-music {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(253, 217, 108);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: 2%;
+    left: 95%;
+    z-index: 1000;
+}
+
+.btn-music img {
+    width: 100%;
+}
+
+.btn-music:hover {
+    background-color: rgb(233, 129, 10);
+    cursor: pointer;
+}
+
+.title {
+    padding: 10px;
+    text-align: center;
+    height: 5vh;
+}
+
+
+.diagrama {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1rem;
+    height: 95vh;
+    padding: 10px;
+}
+
+.game {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+}
+
+
+.img-game {
+    order: -1;
+    width: 20%;
+    border-radius: 50%;
+}
+
+.col-oct {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.col-cuarto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.col-semis {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.col-final {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.team {
+    display: flex;
+    justify-content: space-between;
+    padding: 1px 2px;
+}
+.btn-simu{
+    width: 80%;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 20px;
+    transition: background-color 1s;
+    background-color: #fdbb2d;
+    font-size: 20px;
+    border: none;
+}
+
+.btn-simu:hover {
+    cursor: pointer;
+    background: #ca6710;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #fdbb2d, #b21f1f, #1a2a6c);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #fdbb2d, #b21f1f, #1a2a6c);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.team:first-of-type {
+    margin-bottom: 20px;
+}
+
+.aprobado-team {
+    border-radius: 10px;
+    background-color: #a7fb6d;
+}
+
+.ganador-team {
+    font-size: 3em;
+}
+
+/* 
+.team {
+    display: flex;
+    justify-content: space-around;
+}
+
+.team:first-of-type {
+    margin-bottom: 20px;
+}
+*/
+
+.pais {
+    font-size: 1.3vw;
+}
+
+
+.end-border {
+    transition: 3s linear all;
+    --border-size: 3px;
+    --border-angle: 0turn;
+    /* width: 60vmin;
+    height: 50vmin; */
+    background-image: conic-gradient(from var(--border-angle),
+            rgb(255, 255, 255),
+            rgb(255, 255, 255) 50%,
+            rgb(255, 255, 255)),
+        conic-gradient(from var(--border-angle), transparent 20%, rgb(238, 82, 29), rgb(255, 196, 4));
+    background-size: calc(100% - (var(--border-size) * 2)) calc(100% - (var(--border-size) * 2)),
+        cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    animation: bg-spin 60s linear infinite;
+}
+
+.wait-border {
+    transition: 3s linear all;
+    --border-size: 3px;
+    --border-angle: 0turn;
+    /* width: 60vmin;
+    height: 50vmin; */
+    background-image: conic-gradient(from var(--border-angle),
+            rgb(255, 255, 255),
+            rgb(255, 255, 255) 50%,
+            rgb(255, 255, 255)),
+        conic-gradient(from var(--border-angle), transparent 20%, rgb(34, 142, 237), rgb(27, 30, 223));
+    background-size: calc(100% - (var(--border-size) * 2)) calc(100% - (var(--border-size) * 2)),
+        cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    animation: bg-spin 20s linear infinite;
+}
+
+.game-border {
+    transition: 3s linear all;
+    --border-size: 3px;
+    --border-angle: 0turn;
+    /* width: 60vmin;
+    height: 50vmin; */
+    background-image: conic-gradient(from var(--border-angle),
+            rgb(255, 255, 255),
+            rgb(255, 255, 255) 50%,
+            rgb(255, 255, 255)),
+        conic-gradient(from var(--border-angle), transparent 20%, rgb(77, 255, 0), rgb(28, 212, 80));
+    background-size: calc(100% - (var(--border-size) * 2)) calc(100% - (var(--border-size) * 2)),
+        cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    animation: bg-spin 2s linear infinite;
+}
+
+@keyframes bg-spin {
+    to {
+        --border-angle: 1turn;
+    }
+}
+
+&:hover {
+    animation-play-state: paused;
+}
+
+
+@property --border-angle {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0turn;
+}
+
+@media screen and (max-width: 900px) {
+
+    .btn-music {
+        left: 90%;
+        width: 30px;
+        height: 30px;
+    }
+
+    .simulador {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .diagrama {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 70vw;
+    }
+    .game {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 1rem;
+        height: 20vh;
+    }
+
+    .team {
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    .col-oct{
+        order: 0;
+    }
+
+    .col-oct:last-child .fase-oct{
+        display: none;
+    }
+
+    .col-cuarto{
+        order: 1;
+    }
+
+    .fase-cuarto-2 {
+        display: none;
+    }
+
+    .fase-semis-2 {
+        display: none;
+    }
+
+    .col-semis {
+        order: 2;
+    }
+
+    .col-semis:last-child .fase-semis {
+        display: none;
+    }
+
+    .col-final{
+        order: 3;
+    }
+    
+    .final-0 {
+        order: 0;
+    }
+
+    .final-1 {
+        order: 1;
+    }
+    .final-2 {
+        order: 2;
+    }
+    .final-3 {
+        order: 3;
+    }
+    .final-4 {
+        order: 4;
+    }
+
+    .title {
+        font-size: 1.5em;
+        height: 10vh;
+    }
+
+    .pais {
+        font-size: 1.0em;
+    }
+    .goles {
+        font-size: 1.0em;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .title {
+        font-size: 1px;
+    }
+
+    .pais {
+        font-size: .7em
+    }
+    .goles {
+        font-size: .7em
+    }
+}
+
+@media screen and (max-width: 240px) {
+
+    .col-oct{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pais {
+        font-size: .6em
+    }
+    .goles {
+        font-size: .6em
+    }
+}
